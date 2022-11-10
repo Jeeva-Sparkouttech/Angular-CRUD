@@ -1,6 +1,7 @@
-<h1 routerLink="/home">{{title}}</h1>
-<button (click)="relative()">Create</button>
-<button routerLink="/read-data">Read</button>
-<button routerLink="/update-data">Update</button>
-<button routerLink="/delete-data">Delete</button>
+<nav class="navbar navbar-light bg-secondary">
+    <div class="container-fluid">
+        <h1 routerLink="/home" [style]="'color : white'">{{title}}</h1>
+        <button class="btn bg-dark" [style]="'color:white'" routerLink="/create-data">Create</button>
+    </div>
+</nav>
 <router-outlet></router-outlet>

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CreateDataComponent } from './create-data/create-data.component';
-import { ReadDataComponent } from './read-data/read-data.component';
 import { UpdateDataComponent } from './update-data/update-data.component';
 import { DeleteDataComponent } from './delete-data/delete-data.component';
 
@@ -14,13 +14,13 @@ import { DeleteDataComponent } from './delete-data/delete-data.component';
     AppComponent,
     HomeComponent,
     CreateDataComponent,
-    ReadDataComponent,
     UpdateDataComponent,
-    DeleteDataComponent
+    DeleteDataComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
