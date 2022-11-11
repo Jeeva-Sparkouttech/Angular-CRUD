@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
+import { FormBuilder,FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-data',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateDataComponent implements OnInit {
 
-  constructor() { }
+  angForm !: FormGroup
+
+  constructor(private formBuilder : FormBuilder) { }
 
   ngOnInit(): void {
+    this.angForm = this.formBuilder.group({
+      id : [''],
+      firstName : [''],
+      lastName : [''],
+      email :[''],
+      gender : [''],
+      mobile : ['']
+    })
   }
 
 }
