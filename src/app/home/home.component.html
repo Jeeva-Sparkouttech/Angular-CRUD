@@ -1,4 +1,4 @@
-<table class="table mt-2">
+<table class="table mt-2 ms-2">
     <thead>
         <tr>
             <th scope="col">Employee ID</th>
@@ -12,16 +12,17 @@
     </thead>
     <tbody>
         <tr>
-            <td>-test-</td>
-            <td>-test-</td>
-            <td>-test-</td>
-            <td>-test-</td>
-            <td>-test-</td>
-            <td>-test-</td>
-            <td>
-                <button class="btn btn-info" routerLink="/update-data">Update</button>
-                <button class="btn btn-danger mx-3" routerLink="/delete-data">Delete</button>
-            </td>
-        </tr>
+            <tr *ngFor="let employee of employeeData">
+                <td scope="col">{{employee.id}}</td>
+                <td scope="col">{{employee.firstName}}</td>
+                <td scope="col">{{employee.lastName}}</td>
+                <td scope="col">{{employee.email}}</td>
+                <td scope="col">{{employee.gender}}</td>
+                <td scope="col">{{employee.mobile}}</td>
+                <td>
+                    <button class="btn btn-info" routerLink="/update-data">Update</button>
+                    <button class="btn btn-danger mx-3" routerLink="/delete-data">Delete</button>
+                </td>
+            </tr>
     </tbody>
 </table>

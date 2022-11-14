@@ -1,13 +1,46 @@
 {
-    "posts": [
-
-    ],
-    "comments": [{
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-    }],
-    "profile": {
-        "name": "typicode"
+  "posts": [
+    {
+      "id": "1",
+      "firstName": "Jeevanantham",
+      "lastName": "B",
+      "email": "jeevabaskaran328@gmail.com",
+      "gender": "Male",
+      "mobile": "+919080696879"
+    },
+    {
+      "id": "2",
+      "firstName": "Naveen",
+      "lastName": "G",
+      "email": "naveen@gmail.com",
+      "gender": "Male",
+      "mobile": "9043230662"
+    },
+    {
+      "id": "3",
+      "firstName": "Sathya",
+      "lastName": "CV",
+      "email": "sathya@gmail.com",
+      "gender": "Male",
+      "mobile": "9443575035"
+    },
+    {
+      "id": "4",
+      "firstName": "Vignesh",
+      "lastName": "D",
+      "email": "vignesh12@gmail.com",
+      "gender": "Male",
+      "mobile": "9812309856"
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

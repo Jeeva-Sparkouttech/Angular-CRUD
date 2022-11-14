@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudServiceService } from '../Service/crud-service.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  employeeData !: any
+
+  constructor(private api : CrudServiceService) { }
 
   ngOnInit(): void {
+    this.getAllEmployee()
+  }
+
+  getAllEmployee(){
+    this.api.getEmployee()
+    .subscribe(res =>{
+      this.employeeData = res
+    })
   }
 
 }
