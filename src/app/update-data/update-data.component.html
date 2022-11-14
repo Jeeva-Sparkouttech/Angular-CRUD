@@ -1,1 +1,35 @@
-<p>update-data works!</p>
+<form class="form mt-3 ms-4" [formGroup]="angForm">
+
+    <div class="mb-3">
+        <label for="id" class="form-label">ID</label>
+        <input formControlName="id" type="text" class="form-control" id="id" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+        <label for="firstName" class="form-label">First name</label>
+        <input formControlName="firstName" type="text" class="form-control" id="firstName">
+    </div>
+
+    <div class="mb-3">
+        <label for="lastName" class="form-label">Last name</label>
+        <input formControlName="lastName" type="text" class="form-control" id="lastName">
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input formControlName="email" type="email" class="form-control" id="email">
+    </div>
+
+    <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <input formControlName="gender" type="text" class="form-control" id="gender">
+    </div>
+
+    <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile</label>
+        <input formControlName="mobile" type="text" class="form-control" id="mobile">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

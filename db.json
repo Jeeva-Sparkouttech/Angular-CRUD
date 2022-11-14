@@ -15,22 +15,6 @@
       "email": "naveen@gmail.com",
       "gender": "Male",
       "mobile": "9043230662"
-    },
-    {
-      "id": "3",
-      "firstName": "Sathya",
-      "lastName": "CV",
-      "email": "sathya@gmail.com",
-      "gender": "Male",
-      "mobile": "9443575035"
-    },
-    {
-      "id": "4",
-      "firstName": "Vignesh",
-      "lastName": "D",
-      "email": "vignesh12@gmail.com",
-      "gender": "Male",
-      "mobile": "9812309856"
     }
   ],
   "comments": [

@@ -20,8 +20,8 @@
                 <td scope="col">{{employee.gender}}</td>
                 <td scope="col">{{employee.mobile}}</td>
                 <td>
-                    <button class="btn btn-info" routerLink="/update-data">Update</button>
-                    <button class="btn btn-danger mx-3" routerLink="/delete-data">Delete</button>
+                    <button (click)="onEdit(employee.id)" class="btn btn-info">Update</button>
+                    <button (click)="deleteEmployee(employee)" class="btn btn-danger mx-3">Delete</button>
                 </td>
             </tr>
     </tbody>
