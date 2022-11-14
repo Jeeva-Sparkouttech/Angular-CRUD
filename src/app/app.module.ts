@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CreateDataComponent } from './create-data/create-data.component';
 import { UpdateDataComponent } from './update-data/update-data.component';
-import { DeleteDataComponent } from './delete-data/delete-data.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     HomeComponent,
     CreateDataComponent,
     UpdateDataComponent,
-    DeleteDataComponent,
   ],
   imports: [
     BrowserModule,
