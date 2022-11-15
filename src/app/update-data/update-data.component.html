@@ -2,7 +2,7 @@
 
     <div class="mb-3">
         <label for="id" class="form-label">ID</label>
-        <input formControlName="id" type="text" class="form-control" id="id" aria-describedby="emailHelp">
+        <input formControlName="id" type="number" class="form-control" id="id" aria-describedby="emailHelp">
     </div>
 
     <div class="mb-3">
@@ -31,5 +31,5 @@
     </div>
 
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button (click)="updateEmployee()" type="submit" class="btn btn-primary">Submit</button>
 </form>

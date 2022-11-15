@@ -38,7 +38,7 @@ export class CreateDataComponent implements OnInit {
     await this.api.postEmployee(this.employeeModalObj)
     .subscribe(res=>{
       console.log(res)
-      alert("Employee added successfully")
+       alert("Employee added successfully")
       this.angForm.reset()
     },
     err=>{
