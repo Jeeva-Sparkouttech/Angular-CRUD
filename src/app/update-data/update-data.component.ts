@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup } from '@angular/forms';
+import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 import { CrudServiceService } from '../Service/crud-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeModel } from '../employee.model';
@@ -10,7 +10,7 @@ import { EmployeeModel } from '../employee.model';
   styleUrls: ['./update-data.component.css']
 })
 export class UpdateDataComponent implements OnInit {
-
+  submitted = false
   public data: any
   public empId:any
 
@@ -24,12 +24,12 @@ export class UpdateDataComponent implements OnInit {
     this.empId = id
 
     this.angForm = this.formBuilder.group({
-      id : [''],
-      firstName : [''],
-      lastName : [''],
-      email :[''],
-      gender : [''],
-      mobile : ['']
+      id : ['',Validators.required],
+      firstName : ['',Validators.required],
+      lastName : ['',Validators.required],
+      email :['',[Validators.required,Validators.email]],
+      gender : ['',Validators.required],
+      mobile : ['',Validators.required]
     })
 
     this.defaultValue()
@@ -51,6 +51,8 @@ export class UpdateDataComponent implements OnInit {
   }
 
   async updateEmployee(){
+    this.submitted = true
+    if(this.angForm.valid){
     this.empData.id = this.angForm.value.id
     this.empData.firstName = this.angForm.value.firstName
     this.empData.lastName = this.angForm.value.lastName
@@ -70,4 +72,5 @@ export class UpdateDataComponent implements OnInit {
 
     await this.router.navigate(['/home'])
   }
+}
 }

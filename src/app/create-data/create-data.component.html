@@ -1,35 +1,41 @@
 <form class="form mt-3 ms-4" [formGroup]="angForm">
 
     <div class="mb-3">
-        <label for="id" class="form-label">ID</label>
+        <label for="id" class="form-label">ID</label> &nbsp;
+        <small *ngIf="(angForm.controls['id'].touched || submitted) && angForm.hasError('required','id')" class="text-danger">*id required</small>
         <input formControlName="id" type="number" class="form-control" id="id" aria-describedby="emailHelp">
     </div>
 
     <div class="mb-3">
-        <label for="firstName" class="form-label">First name</label>
+        <label for="firstName" class="form-label">First name</label> &nbsp;
+        <small *ngIf="(angForm.controls['firstName'].touched|| submitted) && angForm.hasError('required','firstName')" class="text-danger">*first name required</small>
         <input formControlName="firstName" type="text" class="form-control" id="firstName">
     </div>
 
     <div class="mb-3">
-        <label for="lastName" class="form-label">Last name</label>
+        <label for="lastName" class="form-label">Last name</label> &nbsp;
+        <small *ngIf="(angForm.controls['lastName'].touched|| submitted) && angForm.hasError('required','lastName')" class="text-danger">*last name required</small>
         <input formControlName="lastName" type="text" class="form-control" id="lastName">
     </div>
 
     <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
+        <label for="email" class="form-label">Email</label> &nbsp;
+        <small *ngIf="(angForm.controls['email'].touched|| submitted) && angForm.hasError('required','email')" class="text-danger">*email required</small>
+        <small *ngIf="(angForm.controls['email'].touched) && angForm.hasError('email','email')" class="text-danger">*enter valid email</small>
         <input formControlName="email" type="email" class="form-control" id="email">
     </div>
 
     <div class="mb-3">
-        <label for="gender" class="form-label">Gender</label>
+        <label for="gender" class="form-label">Gender</label>&nbsp;
+        <small *ngIf="(angForm.controls['gender'].touched|| submitted) && angForm.hasError('required','gender')" class="text-danger">*gender required</small>
         <input formControlName="gender" type="text" class="form-control" id="gender">
     </div>
 
     <div class="mb-3">
-        <label for="mobile" class="form-label">Mobile</label>
+        <label for="mobile" class="form-label">Mobile</label>&nbsp;
+        <small *ngIf="(angForm.controls['mobile'].touched|| submitted) && angForm.hasError('required','mobile')" class="text-danger">*mobile number required</small>
         <input formControlName="mobile" type="text" class="form-control" id="mobile">
     </div>
-
 
     <button type="submit" (click)="postEmployeeDetails()" class="btn btn-primary">Submit</button>
 </form>
