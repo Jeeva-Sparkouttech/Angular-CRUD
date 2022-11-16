@@ -27,10 +27,6 @@ export class ValidationUsingServiceComponent implements OnInit {
     );
   }
 
-  get registerFormControl() {
-    return this.registerForm.controls;
-  }
-
   onSubmit() {
     this.submitted = true;
     if (this.registerForm.valid) {

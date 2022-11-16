@@ -24,16 +24,16 @@ export class ValidationService {
   }
 
   MatchPassword(password: string, confirmPassword: string) {
-    return (formGroup: FormGroup) => {
+    return (formGroup : FormGroup) => {
       const passwordControl = formGroup.controls[password];
       const confirmPasswordControl = formGroup.controls[confirmPassword];
 
       if (!passwordControl || !confirmPasswordControl) {
-        return null;
+        return this.val;
       }
 
       if (confirmPasswordControl.errors && !confirmPasswordControl.errors['passwordMismatch']) {
-        return null;
+        return this.val;
       }
 
       if (passwordControl.value !== confirmPasswordControl.value) {
